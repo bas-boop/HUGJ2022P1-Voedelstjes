@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
+
     [Header("AXIS")]
     [SerializeField] private float horizontal;
     [SerializeField] private float vertical;
@@ -22,6 +24,21 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+
+        if (horizontal != 0)
+        {
+            animator.SetBool("IsWalking", true);
+        }else if (horizontal == 0)
+        {
+            animator.SetBool("IsWalking", false);
+        }
+        if (vertical != 0)
+        {
+            animator.SetBool("IsWalking", true);
+        }else if (vertical == 0)
+        {
+            animator.SetBool("IsWalking", false);
+        }
     }
 
     private void FixedUpdate()

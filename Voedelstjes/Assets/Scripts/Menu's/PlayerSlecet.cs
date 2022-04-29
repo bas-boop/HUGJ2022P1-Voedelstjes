@@ -18,7 +18,7 @@ public class PlayerSlecet : MonoBehaviour
         File.WriteAllText(Application.dataPath + "/Json/PlayerSlecet.json", save);
         Debug.Log(json);
         
-        //SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Level");
     }
     public void Kiwi()
     {
@@ -32,7 +32,7 @@ public class PlayerSlecet : MonoBehaviour
         File.WriteAllText(Application.dataPath + "/Json/PlayerSlecet.json", save);
         Debug.Log(json);
         
-        //SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("Level");
     }
 
     class Chose

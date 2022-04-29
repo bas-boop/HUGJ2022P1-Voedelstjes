@@ -11,6 +11,9 @@ public class GetPlayer : MonoBehaviour
     
     [SerializeField] private GameObject strawberryPlayer;
     [SerializeField] private GameObject kiwiPlayer;
+
+    [SerializeField] private GameObject strawberryJar;
+    [SerializeField] private GameObject kiwiJar;
     
     private bool _isStrawberry;
     private bool _isKiwi;
@@ -30,12 +33,14 @@ public class GetPlayer : MonoBehaviour
         {
             camera.Follow = strawberryPlayer.transform;
             Destroy(kiwiPlayer);
+            Destroy(kiwiJar);
         }
 
         if (_isKiwi)
         {
             camera.Follow = kiwiPlayer.transform;
             Destroy(strawberryPlayer);
+            Destroy(strawberryJar);
         }
     }
 

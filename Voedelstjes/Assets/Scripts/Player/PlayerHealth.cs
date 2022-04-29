@@ -34,8 +34,7 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("Death");
         }
-        controlHealth();
-        
+
         if (health <= maxHealth / 2)
         {
             isDamaged = true;
@@ -57,6 +56,10 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage()
     {
         health -= 1;
+        if (health < 0)
+        {
+            health = 0;
+        }
         currentJar.SetActive(false);
         _index = health;
         currentJar = jars[_index];
@@ -65,21 +68,13 @@ public class PlayerHealth : MonoBehaviour
     public void Heal()
     {
         health += 1;
-        currentJar.SetActive(false);
-        _index = health;
-        currentJar = jars[_index];
-        currentJar.SetActive(true);
-    }
-
-    private void controlHealth()
-    {
         if (health > maxHealth)
         {
             health = maxHealth;
         }
-        if (health < 0)
-        {
-            health = 0;
-        }
+        currentJar.SetActive(false);
+        _index = health;
+        currentJar = jars[_index];
+        currentJar.SetActive(true);
     }
 }

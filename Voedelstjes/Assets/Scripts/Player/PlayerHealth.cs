@@ -5,7 +5,28 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [Header("VALUE'S")]
     [SerializeField] private int health;
+    [SerializeField] private int maxHealth;
+
+    [Header("JAR'S")]
+    [SerializeField] private GameObject[] jars;
+    [SerializeField] private GameObject currentJar;
+    [SerializeField] private GameObject maxJar;
+    private int _index;
+
+    [Header("PLAYER SPRITE")]
+    [SerializeField] private Sprite full;
+    [SerializeField] private Sprite damaged;
+    private bool isDamaged;
+
+    private void Awake()
+    {
+        _index = maxHealth;
+        currentJar = jars[_index];
+        maxJar = jars[maxHealth];
+        maxJar.SetActive(true);
+    }
 
     private void Update()
     {
@@ -15,32 +36,46 @@ public class PlayerHealth : MonoBehaviour
         }
         controlHealth();
         
-        /*if (Input.GetKeyDown(KeyCode.Space))
+        if (health <= maxHealth / 2)
+        {
+            isDamaged = true;
+            Debug.Log(isDamaged);
+
+            this.GetComponent<SpriteRenderer>().sprite = damaged;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage();
         }
         if (Input.GetKeyDown(KeyCode.H))
         {
             Heal();
-        }*/
+        }
     }
 
     public void TakeDamage()
     {
         health -= 1;
-        Debug.Log(health);
+        currentJar.SetActive(false);
+        _index = health;
+        currentJar = jars[_index];
+        currentJar.SetActive(true);
     }
     public void Heal()
     {
         health += 1;
-        Debug.Log(health);
+        currentJar.SetActive(false);
+        _index = health;
+        currentJar = jars[_index];
+        currentJar.SetActive(true);
     }
 
     private void controlHealth()
     {
-        if (health > 3)
+        if (health > maxHealth)
         {
-            health = 3;
+            health = maxHealth;
         }
         if (health < 0)
         {

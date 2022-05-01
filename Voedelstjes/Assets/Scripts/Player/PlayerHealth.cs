@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private GameObject blur;
     [SerializeField] private Color newColor;
+    [SerializeField] private GameManger gm;
     
     [Header("VALUE'S")]
     [SerializeField] private int health;
@@ -16,7 +17,8 @@ public class PlayerHealth : MonoBehaviour
     [Header("JAR'S")]
     [SerializeField] private GameObject[] jars;
     [SerializeField] private GameObject currentJar;
-    [SerializeField] private GameObject maxJar;
+    [SerializeField] private GameObject SMaxJar;
+    [SerializeField] private GameObject KMaxJar;
     private int _index;
 
     [Header("PLAYER SPRITE")]
@@ -24,12 +26,12 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Sprite damaged;
     private bool isDamaged;
 
-    private void Awake()
+    private void Start()
     {
-        _index = maxHealth;
-        currentJar = jars[_index];
-        maxJar = jars[maxHealth];
-        maxJar.SetActive(true);
+        gm = GameObject.Find("Gamemanger").GetComponent<GameManger>();
+        blur = GameObject.Find("Blur");
+        
+        FillHealthSprites();
     }
 
     private void Update()
@@ -54,7 +56,7 @@ public class PlayerHealth : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            TakeDamage();
+            TakeDamage(1);
         }
         if (Input.GetKeyDown(KeyCode.H))
         {
@@ -62,9 +64,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void TakeDamage()
+    public void TakeDamage(int amount)
     {
-        health -= 1;
+        health -= amount;
         if (health < 0)
         {
             health = 0;
@@ -85,5 +87,27 @@ public class PlayerHealth : MonoBehaviour
         _index = health;
         currentJar = jars[_index];
         currentJar.SetActive(true);
+    }
+
+    private void FillHealthSprites()
+    {
+        if (this.gameObject.name == "StrawberryPlayer(Clone)")
+        {
+            jars = gm.Sjars;
+            
+            _index = maxHealth;
+            currentJar = jars[_index];
+            SMaxJar = jars[maxHealth];
+            SMaxJar.SetActive(true);
+        }
+        else if (this.gameObject.name == "KiwiPlayer(Clone)")
+        {
+            jars = gm.Kjars;
+            
+            _index = maxHealth;
+            currentJar = jars[_index];
+            KMaxJar = jars[maxHealth];
+            KMaxJar.SetActive(true);
+        }
     }
 }

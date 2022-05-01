@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Cinemachine;
+using UnityEngine.Events;
 
 public class GetPlayer : MonoBehaviour
 {
@@ -25,22 +26,19 @@ public class GetPlayer : MonoBehaviour
 
         _isStrawberry = load.strawberry;
         _isKiwi = load.kiwi;
-    }
-
-    private void Start()
-    {
+        
         if (_isStrawberry)
         {
-            camera.Follow = strawberryPlayer.transform;
-            Destroy(kiwiPlayer);
-            Destroy(kiwiJar);
+            GameObject s = Instantiate(strawberryPlayer);
+            camera.Follow = s.transform;
+            camera.LookAt = s.transform;
         }
 
         if (_isKiwi)
         {
-            camera.Follow = kiwiPlayer.transform;
-            Destroy(strawberryPlayer);
-            Destroy(strawberryJar);
+            GameObject k = Instantiate(kiwiPlayer);
+            camera.Follow = k.transform;
+            camera.LookAt = k.transform;
         }
     }
 

@@ -2,9 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] private GameObject blur;
+    [SerializeField] private Color newColor;
+    
     [Header("VALUE'S")]
     [SerializeField] private int health;
     [SerializeField] private int maxHealth;
@@ -41,6 +45,11 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log(isDamaged);
 
             this.GetComponent<SpriteRenderer>().sprite = damaged;
+        }
+
+        if (isDamaged)
+        {
+            blur.GetComponent<Image>().color = newColor;
         }
         
         if (Input.GetKeyDown(KeyCode.Space))

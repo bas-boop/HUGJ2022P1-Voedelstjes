@@ -44,7 +44,6 @@ public class PlayerHealth : MonoBehaviour
         if (health <= maxHealth / 2)
         {
             isDamaged = true;
-            Debug.Log(isDamaged);
 
             this.GetComponent<SpriteRenderer>().sprite = damaged;
         }

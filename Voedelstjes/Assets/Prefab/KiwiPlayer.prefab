@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9177647687454179658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.95, y: 1.51, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000000029802322, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -151,7 +151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.93613356, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &9177647687454179656
 MonoBehaviour:
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blur: {fileID: 0}
   newColor: {r: 0, g: 0, b: 0, a: 0.6666667}
+  gm: {fileID: 0}
   health: 2
   maxHealth: 2
   jars:
@@ -190,6 +191,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   currentJar: {fileID: 0}
-  maxJar: {fileID: 0}
+  SMaxJar: {fileID: 0}
+  KMaxJar: {fileID: 0}
   full: {fileID: 21300000, guid: 14b00fb7b322d884c93602adb192ccce, type: 3}
   damaged: {fileID: 21300000, guid: d38a973e840575d4fbac8f4fe5632d70, type: 3}

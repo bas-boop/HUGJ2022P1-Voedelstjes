@@ -2,12 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private GameObject blur;
-    [SerializeField] private Color newColor;
     [SerializeField] private GameManger gm;
     
     [Header("VALUE'S")]
@@ -29,8 +28,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         gm = GameObject.Find("Gamemanger").GetComponent<GameManger>();
-        blur = GameObject.Find("Blur");
-        
+
         FillHealthSprites();
     }
 
@@ -39,6 +37,14 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("Death");
+            if (this.gameObject.name == "StrawberryPlayer(Clone)")
+            {
+                SceneManager.LoadScene("StrawberryLose");
+            }
+            else if (this.gameObject.name == "KiwiPlayer(Clone)")
+            {
+                SceneManager.LoadScene("KiwiLose");
+            }
         }
 
         if (health <= maxHealth / 2)
@@ -48,11 +54,6 @@ public class PlayerHealth : MonoBehaviour
             this.GetComponent<SpriteRenderer>().sprite = damaged;
         }
 
-        if (isDamaged)
-        {
-            blur.GetComponent<Image>().color = newColor;
-        }
-        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(1);

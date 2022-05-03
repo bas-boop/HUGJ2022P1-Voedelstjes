@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PlayerSlecetScreen.unity
+    guid: 4f39bb58fc146c44685d4448c60cdfb1
+  - enabled: 1
     path: Assets/Scenes/Level.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/LoseScreens/StrawberryLose.unity
+    guid: 32f5b125c0c15b34c90427dd97e150dc
+  - enabled: 1
+    path: Assets/Scenes/LoseScreens/KiwiLose.unity
+    guid: feac229d5aba2f74996e2b3f542672ef
   m_configObjects: {}

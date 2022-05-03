@@ -1,0 +1,11 @@
+pas lose screen aan with screen size
+
+andere collider voor player, geen box
+
+maak de aarbei blij
+
+misschien mecicaanse muziek
+
+nog een enmey gedrag, bijvoorbeeld player volgen
+
+geluid waneer je hp verliest

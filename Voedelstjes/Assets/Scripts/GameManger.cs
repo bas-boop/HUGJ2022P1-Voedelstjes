@@ -50,7 +50,7 @@ public class GameManger : MonoBehaviour
             if (otherPlayerTime <= 0)
             {
                 Debug.Log("Andere player heeft gewonnen!!!");
-                //load lose scené
+                SceneManager.LoadScene("StrawberryLose");
             }
         }
         else if (player.name == "KiwiPlayer(Clone)")
@@ -59,7 +59,7 @@ public class GameManger : MonoBehaviour
             if (otherPlayerTime <= 0)
             {
                 Debug.Log("Andere player heeft gewonnen!!!");
-                //load lose scené
+                SceneManager.LoadScene("KiwiLose");
             }
         }
         

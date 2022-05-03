@@ -7,7 +7,7 @@ public class LoseScreen : MonoBehaviour
 {
     public void MainMenu()
     {
-        //SceneManager.LoadScene("");
+        SceneManager.LoadScene("PlayerSlecetScreen");
     }
 
     public void Restart()

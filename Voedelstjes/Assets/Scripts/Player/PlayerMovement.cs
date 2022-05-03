@@ -28,14 +28,11 @@ public class PlayerMovement : MonoBehaviour
         if (horizontal != 0)
         {
             animator.SetBool("IsWalking", true);
-        }else if (horizontal == 0)
-        {
-            animator.SetBool("IsWalking", false);
         }
-        if (vertical != 0)
+        else if (vertical != 0)
         {
             animator.SetBool("IsWalking", true);
-        }else if (vertical == 0)
+        }else if (vertical == 0 || horizontal == 0)
         {
             animator.SetBool("IsWalking", false);
         }

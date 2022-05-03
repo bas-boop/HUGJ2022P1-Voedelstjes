@@ -168,7 +168,7 @@ MonoBehaviour:
   animator: {fileID: 8129190584276766083}
   horizontal: 0
   vertical: 0
-  walkSpeed: 5
+  walkSpeed: 3.75
 --- !u!114 &8129190584276766082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,8 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5896fd7ea25db4baea4aa4716e085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blur: {fileID: 0}
-  newColor: {r: 0, g: 0, b: 0, a: 0.6666667}
   gm: {fileID: 0}
   health: 4
   maxHealth: 4

@@ -35,6 +35,11 @@ public class PlayerSlecet : MonoBehaviour
         SceneManager.LoadScene("Level");
     }
 
+    public void BackButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     class Chose
     {
         public bool strawberry;

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9177647687454179661}
   - component: {fileID: 9177647687454179662}
   - component: {fileID: 9177647687454179663}
-  - component: {fileID: 9177647687454179651}
+  - component: {fileID: 6828330592345527634}
   - component: {fileID: 9177647687454179656}
   - component: {fileID: 9177647687454179657}
   m_Layer: 0
@@ -127,8 +127,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &9177647687454179651
-BoxCollider2D:
+--- !u!60 &6828330592345527634
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000000029802322, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -150,9 +150,34 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.93613356, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.268, y: -0.5}
+      - {x: 0.268, y: -0.367}
+      - {x: 0.266, y: -0.365}
+      - {x: 0.28688335, y: -0.19394776}
+      - {x: 0.46800002, y: -0.102000006}
+      - {x: 0.46800002, y: 0.033}
+      - {x: 0.46600002, y: 0.035}
+      - {x: 0.40100002, y: 0.16700001}
+      - {x: 0.341811, y: 0.1716225}
+      - {x: 0.34636432, y: 0.36936426}
+      - {x: 0.17500001, y: 0.5}
+      - {x: -0.16800001, y: 0.5}
+      - {x: -0.34418213, y: 0.37909108}
+      - {x: -0.34410784, y: 0.16680641}
+      - {x: -0.40462336, y: 0.16855048}
+      - {x: -0.40663174, y: 0.04185968}
+      - {x: -0.469, y: 0.044000003}
+      - {x: -0.469, y: -0.105000004}
+      - {x: -0.39800003, y: -0.105000004}
+      - {x: -0.33900002, y: -0.16900001}
+      - {x: -0.26900002, y: -0.238}
+      - {x: -0.26900002, y: -0.5}
+      - {x: -0.19800001, y: -0.5}
+      - {x: -0.132, y: -0.367}
+      - {x: 0.12900001, y: -0.37}
+      - {x: 0.19700001, y: -0.5}
 --- !u!114 &9177647687454179656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,8 +206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5896fd7ea25db4baea4aa4716e085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blur: {fileID: 0}
-  newColor: {r: 0, g: 0, b: 0, a: 0.6666667}
   gm: {fileID: 0}
   health: 2
   maxHealth: 2

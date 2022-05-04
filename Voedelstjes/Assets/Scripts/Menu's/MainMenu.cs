@@ -3,19 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoseScreen : MonoBehaviour
+public class MainMenu : MonoBehaviour
 {
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-
-    public void Restart()
+    public void PlayButton()
     {
         SceneManager.LoadScene("PlayerSlecetScreen");
     }
-
-    public void Quit()
+    public void QuitButton()
     {
         Application.Quit();
     }

@@ -1,6 +1,6 @@
-pas lose screen aan with screen size
+pas lose screen aan with screen size *
 
-andere collider voor player, geen box
+andere collider voor player, geen box *
 
 maak de aarbei blij
 

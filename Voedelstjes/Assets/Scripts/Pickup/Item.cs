@@ -21,6 +21,8 @@ public class Item : MonoBehaviour
             isPickedup = true;
             Debug.Log(isPickedup);
             
+            GetComponent<AudioSource>().Play();
+            
             Destroy(this.GetComponent<BoxCollider2D>());
             Destroy(this.GetComponent<SpriteRenderer>());
         }

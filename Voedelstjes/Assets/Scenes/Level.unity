@@ -1967,6 +1967,7 @@ GameObject:
   - component: {fileID: 422125954}
   - component: {fileID: 422125953}
   - component: {fileID: 422125952}
+  - component: {fileID: 422125956}
   m_Layer: 0
   m_Name: Suiker
   m_TagString: Untagged
@@ -2079,6 +2080,25 @@ Transform:
   m_Father: {fileID: 947463533}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &422125956
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422125951}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57ecdb679274e894e817bba6659a3920, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &452503477
 GameObject:
   m_ObjectHideFlags: 0
@@ -5404,6 +5424,7 @@ GameObject:
   - component: {fileID: 1020917050}
   - component: {fileID: 1020917049}
   - component: {fileID: 1020917048}
+  - component: {fileID: 1020917052}
   m_Layer: 0
   m_Name: Bowl
   m_TagString: Untagged
@@ -5516,6 +5537,25 @@ Transform:
   m_Father: {fileID: 947463533}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1020917052
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020917047}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57ecdb679274e894e817bba6659a3920, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1044724899
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,6 +5568,7 @@ GameObject:
   - component: {fileID: 1044724901}
   - component: {fileID: 1044724903}
   - component: {fileID: 1044724900}
+  - component: {fileID: 1044724904}
   m_Layer: 0
   m_Name: Slagroom
   m_TagString: Untagged
@@ -5640,6 +5681,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
+--- !u!95 &1044724904
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044724899}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57ecdb679274e894e817bba6659a3920, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1048459621
 GameObject:
   m_ObjectHideFlags: 0
@@ -5885,6 +5945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de64a716854aec24ba2e48aa096d0546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   slagroom: {fileID: 0}
   suiker: {fileID: 0}
   pan: {fileID: 0}
@@ -10476,6 +10537,7 @@ GameObject:
   - component: {fileID: 1806224643}
   - component: {fileID: 1806224642}
   - component: {fileID: 1806224641}
+  - component: {fileID: 1806224645}
   m_Layer: 0
   m_Name: Pan
   m_TagString: Untagged
@@ -10588,6 +10650,25 @@ Transform:
   m_Father: {fileID: 947463533}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1806224645
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806224640}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57ecdb679274e894e817bba6659a3920, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1817944969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7611977963661746055, guid: 855b2fb4a4b21c740a2781a02e3d8c1a, type: 3}
@@ -10903,6 +10984,7 @@ GameObject:
   - component: {fileID: 1865817637}
   - component: {fileID: 1865817636}
   - component: {fileID: 1865817635}
+  - component: {fileID: 1865817639}
   m_Layer: 0
   m_Name: CampFire
   m_TagString: Untagged
@@ -11015,6 +11097,25 @@ Transform:
   m_Father: {fileID: 947463533}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1865817639
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865817634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 57ecdb679274e894e817bba6659a3920, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1892348614
 GameObject:
   m_ObjectHideFlags: 0

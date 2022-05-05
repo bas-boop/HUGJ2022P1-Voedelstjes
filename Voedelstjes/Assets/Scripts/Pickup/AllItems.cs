@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AllItems : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
+    
     [Header("ITEM'S")]
     [SerializeField] private GameObject slagroom;
     [SerializeField] private GameObject suiker;
@@ -26,6 +29,8 @@ public class AllItems : MonoBehaviour
         pan = GameObject.Find("Pan");
         bowl = GameObject.Find("Bowl");
         campFire = GameObject.Find("CampFire");
+        
+        player = GameObject.FindWithTag("Player");
     }
     
     private void Update()
@@ -38,7 +43,13 @@ public class AllItems : MonoBehaviour
         
         if (isSlagroom && isSuiker && isPan && isBowl && isCampFire)
         {
-            Debug.Log("You Won!!!");
+            if (player.name == "StrawberryPlayer(Clone)")
+            { 
+                SceneManager.LoadScene("StrawberryLose");
+            }else if (player.name == "KiwiPlayer(Clone)") 
+            {
+                SceneManager.LoadScene("KiwiLose");
+            }
         }
     }
 }

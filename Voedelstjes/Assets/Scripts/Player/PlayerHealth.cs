@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private GameManger gm;
-    
+
     [Header("VALUE'S")]
     [SerializeField] private int health;
     [SerializeField] private int maxHealth;
@@ -54,19 +54,20 @@ public class PlayerHealth : MonoBehaviour
             this.GetComponent<SpriteRenderer>().sprite = damaged;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(1);
         }
         if (Input.GetKeyDown(KeyCode.H))
         {
             Heal();
-        }
+        }*/
     }
 
     public void TakeDamage(int amount)
     {
         health -= amount;
+        GetComponent<AudioSource>().Play();
         if (health < 0)
         {
             health = 0;

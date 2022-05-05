@@ -45,10 +45,10 @@ public class AllItems : MonoBehaviour
         {
             if (player.name == "StrawberryPlayer(Clone)")
             { 
-                SceneManager.LoadScene("StrawberryLose");
+                SceneManager.LoadScene("StrawberryWin");
             }else if (player.name == "KiwiPlayer(Clone)") 
             {
-                SceneManager.LoadScene("KiwiLose");
+                SceneManager.LoadScene("KiwiWin");
             }
         }
     }
